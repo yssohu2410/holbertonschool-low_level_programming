@@ -1,18 +1,26 @@
 #include "main.h"
 /**
- * _isalpha - Entry point
- * @c: variable
+ * print_sign - Entry point
+ * @n: variable
  *
  * Return: Always 0 (Success)
  */
-int _isalpha(int c)
+int print_sign(int n)
 {
-if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+if (n > 0)
 {
+_putchar('+');
 return (1);
 }
-else
+else if (n == 0)
 {
+_putchar('0');
 return (0);
 }
+else if (n < 0)
+{
+_putchar('-');
+return (-1);
+}
+return (0);
 }
