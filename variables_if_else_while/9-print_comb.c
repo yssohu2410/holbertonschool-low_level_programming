@@ -15,5 +15,4 @@ for (x = '0'; x <=9; x++)
 {	putchar(',');
 	putchar(' '); }}
 putchar('\n');
-return (0);
-}
+return (0);}
