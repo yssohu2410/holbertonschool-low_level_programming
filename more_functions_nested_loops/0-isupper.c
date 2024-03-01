@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code.
+ * _isupper - check the code.
+ * @c: check
  *
- *@c: check
  * Return: Always 0.
  */
 int _isupper(int c)
