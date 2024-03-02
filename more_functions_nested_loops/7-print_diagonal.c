@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - check the code
- * @n: check 
+ * @n: check
  * Return: Always 0.
  */
 void print_diagonal(int n)
