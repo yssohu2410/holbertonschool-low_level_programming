@@ -4,6 +4,7 @@
 /**
  * main - check the code
  * @size: checker
+ *
  * Return: Always 0.
  */
 void print_triangle(int size)
