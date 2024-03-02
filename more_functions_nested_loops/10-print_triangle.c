@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * print_triangle - prints a triangle
  * @size: checker
  *
  * Return: Always 0.
