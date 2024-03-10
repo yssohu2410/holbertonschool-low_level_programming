@@ -1,26 +1,26 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
-
 /**
- * *_strchr - prints buffer in hexa
- * @s: var
- * @c: var
- *
- * Return: Nothing.
+ * _strchr - check the code
+ * @s: - s
+ * @c: - c
+ * Return: Always 0.
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-	int l = strlen(s);
-
-	for (i = 0; i <= l; i++)
-	{
-		if (s[i] == c)
-		{
-			s += i;
-			return (s);
-		}
-	}
-	return (NULL);
+while (*s)
+{
+if (*s == c)
+{
+return (s);
+}
+s++;
+}
+if (*s == c)
+{
+return (s);
+}
+else
+{
+return (NULL);
+}
 }
