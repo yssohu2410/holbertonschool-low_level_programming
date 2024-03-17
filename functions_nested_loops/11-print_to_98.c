@@ -8,18 +8,28 @@
  */
 void print_to_98(int n)
 {
-while (n != 98)
-{
-if (n > 98)
-{
-printf("%d, ", n);
-n--;
-}
-else
-{
-printf("%d, ", n);
-n++;
-}
-}
-printf("%d\n", n);
+	int x;
+
+	if (n < 98)
+	{
+		printf("%d", n);
+		for (x = n + 1 ; x <= 98 ; x++)
+		{
+			printf(", %d", x);
+
+		}
+	}
+	else if (n >= 98)
+	{
+		printf("%d", n);
+		for  (x = n - 1 ; x >= 98 ; x--)
+		{
+			printf(", %d", x);
+		}
+	}
+	else
+	{
+		printf("%d", 98);
+	}
+	printf("\n");
 }

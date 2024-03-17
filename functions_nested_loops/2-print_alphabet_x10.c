@@ -7,18 +7,17 @@
  */
 void print_alphabet_x10(void)
 {
-	int j = 0;
+char c;
+int i;
+i = 0;
 
-	while (j < 10)
-	{
-		char a[] = "abcdefghijklmnopqrstuvwxyz\n";
-		int i = 0;
-
-		while (a[i])
-		{
-			_putchar(a[i]);
-			i++;
-		}
-		j++;
-	}
+while (i < 10)
+{
+for (c = 'a' ; c <= 'z' ; c++)
+{
+_putchar(c);
+}
+_putchar('\n');
+i++;
+}
 }
