@@ -1,27 +1,37 @@
-#include "main.h"
-#include <string.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include"main.h"
 /**
- * _strdup - fills memory
- * @str: str
- *
- * Return: char
- */
+**_strdup - function copy a string
+*@str: variable pointer char
+*Return: pointer char
+*/
 char *_strdup(char *str)
 {
-	int size;
-	char *buf;
+	int len;
 	int i;
+	char *arr = NULL;
 
-	if (str == NULL)
-		return (NULL);
-	size = strlen(str);
-	buf = malloc(sizeof(char) * size + 1);
-	if (buf == NULL)
-		return (NULL);
-	for (i = 0; i <= size; i++)
+	len = 0;
+
+	if (str == 0)
 	{
-		buf[i] = str[i];
+		return (NULL);
 	}
-	return (buf);
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	arr = malloc(len + 1);
+	if (arr == 0)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (i < len)
+	{
+		arr[i] = str[i];
+		i++;
+	}
+	return (arr);
 }

@@ -1,20 +1,24 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 /**
- * free_grid - fills memory
- * @grid: str
- * @height: str
- * Return: char
+ * free_grid - frees a 2 dimensional grid
+ *
+ * @grid: var
+ * @height: var
+ *
+ * Return: Always 0.
  */
 void free_grid(int **grid, int height)
 {
-	int j;
+	int i;
 
 	if (grid != NULL)
 	{
-		for (j = height; j >= 0; j--)
-			free(grid[j]);
+		for (i = 0 ; i < height ; i++)
+			free(grid[i]);
 		free(grid);
 	}
 }

@@ -1,39 +1,41 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
-/**
- * argstostr - fills memory
- * @ac: str
- * @av: str
- * Return: char
- */
-char *argstostr(int ac, char **av)
-{
-	char *buf;
-	int i, j;
+#include <string.h>
 
-	if (ac == 0 || av == NULL)
+/**
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers
+ *
+ * @width: var
+ * @height: var
+ *
+ * Return: Always 0.
+ */
+int **alloc_grid(int width, int height)
+{
+	int **a, i, j;
+
+	if (width <= 0 || height <= 0)
 		return (NULL);
-	buf = malloc(sizeof(char) * ac + 1);
-	if (buf == NULL)
+	a = malloc(height * sizeof(int *));
+	if (a == NULL)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
-		buf[i] = malloc(sizeof(int) * width);
-		if (buf[i] == NULL)
+		a[i] = malloc(sizeof(int) * width);
+		if (a[i] == NULL)
 		{
-			for (j = i; j >= 0; j--)
-				free(buf[j]);
-			free(buf);
+			for (j = 0; j <= i; j++)
+				free(a[j]);
+			free(a);
 			return (NULL);
 		}
 	}
-	for (i = 0; i < height; i++)
+	for (i = 0 ; i < height ; i++)
 	{
-		for (j = 0; j < width; j++)
-		{
-			buf[i][j] = 0;
-		}
+		for (j = 0 ; j < width ; j++)
+			a[i][j] = 0;
 	}
-	return (buf);
+
+	return (a);
 }
